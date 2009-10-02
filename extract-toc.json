@@ -1,3 +1,16 @@
 {
-  "toc":  "#toc"
+  "title": "h1",
+  "published?": "#product-info .pubDate",
+  "series?": ".series a",
+  "authors?": [".nl a"],
+  "subject?": "#header-breadcrumbs :nth-child(3)",
+  "format?": ".format",
+  "price?": ".list-price",
+  "toc-table(#toc tr)?":  [{
+    "section": "td:nth-child(1)",
+    "title": "td:nth-child(2)",
+    "page": "td:nth-child(3)"
+  }],
+  "toc-paragraph?": ["#toc p"],
+  
 }
