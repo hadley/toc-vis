@@ -17,6 +17,7 @@
     "page": "td:nth-child(3)"
   }],
   "toc-paragraph?": ["#toc p"],
+  "toc-raw?": "#toc", 
   "description?": [".wrap6r p"],
   
 }
