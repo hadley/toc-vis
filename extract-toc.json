@@ -1,16 +1,22 @@
 {
-  "title": "h1",
-  "published?": "#product-info .pubDate",
-  "series?": ".series a",
+  "title?": "replace(h1, ' by.*', '', '')",
   "authors?": [".nl a"],
+
+  "published?": "replace(#product-info .pubDate, 'Pub. Date: ', '', '')",
+  "pages?": "replace(.product-list-info li:nth-child(2), '[^.0-9]', 'g', '')",
+  "isbn?": ".isbn .isbn-a",
+  "format?": "normalize-space(.format)",
+  "price?": "replace(.list-price, '[^.0-9]', 'g', '')",
+
   "subject?": "#header-breadcrumbs :nth-child(3)",
-  "format?": ".format",
-  "price?": ".list-price",
+  "series?": ".series a",
+
   "toc-table(#toc tr)?":  [{
     "section": "td:nth-child(1)",
     "title": "td:nth-child(2)",
     "page": "td:nth-child(3)"
   }],
   "toc-paragraph?": ["#toc p"],
+  "description?": [".wrap6r p"],
   
 }
