@@ -13,5 +13,6 @@ FasterCSV.open("toc.csv", "w") do |csv|
       csv << [book["isbn"], section["section"], 
         section["title"], section["page"]]
     end
+    csv << [book["isbn"], "", "End", book["pages"]]
   end
 end
